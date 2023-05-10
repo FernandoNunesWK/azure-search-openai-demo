@@ -28,11 +28,23 @@
     padding-top: 60px;
 }
 
+.chatInspectorWolT {
+    background-image: url("../../assets/Inspector_Wolt-200.gif");
+    height: 120px;
+    width: 120px;
+    background-position: top center;
+}
+
 .chatEmptyStateTitle {
     font-size: 4rem;
     font-weight: 600;
     margin-top: 0;
-    margin-bottom: 30px;
+    /*margin-bottom: 30px; */
+}
+
+.chatEmptyStateExplenation {
+    margin-top: 0;
+    font-weight: 400;
 }
 
 .chatEmptyStateSubtitle {
