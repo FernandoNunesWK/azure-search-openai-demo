@@ -114,6 +114,23 @@ def ensure_openai_token():
     if openai_token.expires_on < int(time.time()) - 60:
         openai_token = azure_credential.get_token("https://cognitiveservices.azure.com/.default")
         openai.api_key = openai_token.token
-    
+  
+app.debug = True
+app.config['TEMPLATES_AUTO_RELOAD'] = True
+#app.config.update(
+#    TEMPLATES_AUTO_RELOAD=True
+#)
+
+from os import path, walk
+
+extra_dirs = ['./static/',]
+extra_files = extra_dirs[:]
+for extra_dir in extra_dirs:
+    for dirname, dirs, files in walk(extra_dir):
+        for filename in files:
+            filename = path.join(dirname, filename)
+            if path.isfile(filename):
+                extra_files.append(filename)
+
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True, extra_files=extra_files)
