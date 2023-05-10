@@ -10,8 +10,10 @@ const Layout = () => {
             <header className={styles.header} role={"banner"}>
                 <div className={styles.headerContainer}>
                     <Link to="/" className={styles.headerTitleContainer}>
-                        <h3 className={styles.headerTitle}>GPT + Enterprise data | Sample</h3>
+                        <div className={styles.WKlogo}></div>
+                        <h3 className={styles.headerTitle}>Inspector Wol-T</h3>
                     </Link>
+                    {/*
                     <nav>
                         <ul className={styles.headerNavList}>
                             <li>
@@ -37,8 +39,8 @@ const Layout = () => {
                                 </a>
                             </li>
                         </ul>
-                    </nav>
-                    <h4 className={styles.headerRightText}>Azure OpenAI + Cognitive Search</h4>
+    </nav> */}
+                    <h4 className={styles.headerRightText}>A demo by the Luxari Squad </h4>
                 </div>
             </header>
 
